@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">AdeshinaShop</string>
+    <string name="welcome_message">Welcome to Shak\'s store</string>
+    <string name="start_shopping_button">START SHOPPING</string>
+    <string name="welcome_text">Welcome to the <b>NUMBER1</b> canadian clothing store. AdeshinaStore is not just a store or business, it is a lifestyle for both the owners and employees. Find fashionable clothing for men, women and kids at affordable prices. \n Shaping your style is as easy as <b>1,2,3</b></string>
+    <string name="description2_text"><b>NAVY BLUE - 9240/422</b>\n\n Piqué polo shirt with Mandarin collar in matching fabric and short sleeves with ribbed trim. Front button closure.\n\n MODEL HEIGHT: 6’ 2” (189 cm). SIZE L \n\n <b>JOIN LIFE</b>\nCare for fiber: 100% ecologically grown cotton.
+Ecologically grown cotton is grown using practices that help us protect biodiversity, such as crop rotation or the use of natural fertilizers.</string>
+    <string name="description1_text"><b>CAMEL - 0706/202</b>\n\n Bomber jacket made of faux leather fabric with faux fur interior and collar. Long sleeves with elasticized cuffs. Front snap button pockets. Elastic hem. Front zip closure.</string>
+    <string name="description3_text"><b>WHITE - 5372/313</b>\n\n Roomy T-shirt with round neck and short sleeves. Front illustration by James Wilson. </string>
+    <string name="description4_text"><b>DARK BLUE - 6045/302</b>\n\nSkinny jeans with washed effect. Five pockets. Front zip and metal button closure.</string>
+    <string name="cart_items">items currently in cart</string>
+    <string name="current_inCart">0</string>
+    <string name="addToCart2_Text">ADD TO CART</string>
+    <string name="Minus2">-</string>
+    <string name="Plus2">+</string>
+    <string name="item2_price">25.90 CAD</string>
+    <string name="addToCart3_Text">ADD TO CART</string>
+    <string name="Minus3">-</string>
+    <string name="increase_Decrease_TextView3">0</string>
+    <string name="Plus3">+</string>
+    <string name="item3_price">35.90 CAD</string>
+</resources>
