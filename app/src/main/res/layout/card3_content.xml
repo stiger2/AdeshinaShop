@@ -36,7 +36,7 @@
 
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/button_plus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/Plus3" />
@@ -48,7 +48,7 @@
             android:padding="14sp"/>
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/button_minus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/Minus3" />
@@ -63,7 +63,7 @@
         android:layout_height="wrap_content"
         android:text="@string/description3_text" />
     <Button
-        android:id="@+id/addToCart3_Button"
+        android:id="@+id/addToCart_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/addToCart3_Text"/>

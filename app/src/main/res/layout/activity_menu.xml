@@ -51,7 +51,9 @@
                 android:id="@+id/card_1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:padding="20dp"  >
+                android:padding="20dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
                 <include layout="@layout/card1_content" />
 
             </androidx.cardview.widget.CardView>
@@ -60,7 +62,9 @@
                 android:id="@+id/card_2"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:padding="20dp"  >
+                android:padding="20dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
                 <include layout="@layout/card2_content" />
 
             </androidx.cardview.widget.CardView>
@@ -69,7 +73,9 @@
                 android:id="@+id/card_3"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:padding="20dp"  >
+                android:padding="20dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
                 <include layout="@layout/card3_content" />
 
             </androidx.cardview.widget.CardView>
@@ -78,7 +84,9 @@
                 android:id="@+id/card_4"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:padding="20dp"  >
+                android:padding="20dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
                 <include layout="@layout/card4_content" />
 
             </androidx.cardview.widget.CardView>

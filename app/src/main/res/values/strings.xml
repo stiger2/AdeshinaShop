@@ -19,4 +19,5 @@ Ecologically grown cotton is grown using practices that help us protect biodiver
     <string name="increase_Decrease_TextView3">0</string>
     <string name="Plus3">+</string>
     <string name="item3_price">35.90 CAD</string>
+    <string name="toast_message">Hello Toast</string>
 </resources>
