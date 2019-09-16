@@ -13,6 +13,5 @@ public class CheckoutActivity extends AppCompatActivity {
         setContentView(R.layout.activity_checkout);
     }
 
-    public void increaseQuantity(View view) {
-    }
+
 }
