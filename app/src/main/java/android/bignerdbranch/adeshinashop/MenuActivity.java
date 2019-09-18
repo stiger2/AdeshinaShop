@@ -72,17 +72,16 @@ public class MenuActivity extends AppCompatActivity {
         ViewGroup motherView = (ViewGroup)view.getParent().getParent();
         TextView quantity = (TextView)((ViewGroup)motherView.getChildAt(3)).getChildAt(1);
         int quantityToAddToCart = Integer.parseInt(quantity.getText().toString());
-        if(quantityToAddToCart != 0) {
-            quantityInCart += quantityToAddToCart;
-            mItemsInCart.setText(Integer.toString(quantityInCart));
-            Toast toast = Toast.makeText(this, R.string.toast_message, Toast.LENGTH_SHORT);
-            toast.show();
-            String currTotal = String.format("%.2f", mTotal);
-            mCurrentTotal.setText(currTotal);
-            Button btn = (Button) view;
-            btn.setText("ADDED TO CART");
-            btn.setEnabled(false);
-        }
+        quantityInCart += quantityToAddToCart;
+        mItemsInCart.setText(Integer.toString(quantityInCart));
+        Toast toast = Toast.makeText(this, R.string.toast_message, Toast.LENGTH_SHORT);
+        toast.show();
+        String currTotal = String.format("%.2f", mTotal);
+        mCurrentTotal.setText(currTotal);
+        Button btn = (Button) view;
+        btn.setText("" + quantityToAddToCart + " OF THIS ITEM ADDED TO CART");
+        btn.setEnabled(false);
+
 
     }
 
