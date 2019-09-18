@@ -26,7 +26,6 @@ public class MenuActivity extends AppCompatActivity {
     private int mCount;
     Button btn;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,48 +35,38 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     public void quantityIncrease(View view) {
-        ViewGroup motherView = (ViewGroup) view.getParent();
-        TextView quantityView = (TextView) motherView.getChildAt(1);
+        TextView quantityView = getQuantityView(view);
         int mCount = Integer.parseInt(quantityView.getText().toString());
+        if (mCount == 0){
+            LinearLayout addToCartAndSubtotal = (LinearLayout) ((ViewGroup)view.getParent().getParent()).getChildAt(5);
+            addToCartAndSubtotal.setVisibility(view.VISIBLE);
+        }
         mCount++;
         mNoOfItems++;
-        //mItemsInCart.setText(Integer.toString(mNoOfItems));
         quantityView.setText(Integer.toString(mCount));
-
-        ViewGroup parentView = (ViewGroup) motherView.getParent();
-        ViewGroup priceParent = (ViewGroup) parentView.getChildAt(2);
-        TextView priceView = (TextView) priceParent.getChildAt(0);
-        ViewGroup subToTalParent = (ViewGroup) parentView.getChildAt(5);
-        TextView subTotal = (TextView) subToTalParent.getChildAt(1);
-        Float mPrice = Float.parseFloat(priceView.getText().toString());
+        TextView subTotalTextView = getSubtotalTextView((ViewGroup) view.getParent());
+        Float mPrice = getItemPrice((ViewGroup) view.getParent());
         mTotal += mPrice;
-        Float subTot = Float.parseFloat(subTotal.getText().toString()) + mPrice;
-        String subTott = String.format("%.2f", subTot);
-        subTotal.setText(subTott);
+        subTotalTextView.setText(String.format("%.2f", Float.parseFloat(subTotalTextView.getText().toString()) + mPrice));
     }
 
     public void quantityDecrease(View view) {
-        ViewGroup motherView = (ViewGroup) view.getParent();
-        TextView quantityView = (TextView) motherView.getChildAt(1);
+        TextView quantityView = getQuantityView(view);
         int mCount = Integer.parseInt(quantityView.getText().toString());
+        if (mCount == 1){
+            LinearLayout addToCartAndSubtotal = (LinearLayout) ((ViewGroup)view.getParent().getParent()).getChildAt(5);
+            addToCartAndSubtotal.setVisibility(view.INVISIBLE);
+        }
         if (mCount != 0) {
             mCount--;
             mNoOfItems--;
-            ViewGroup parentView = (ViewGroup) motherView.getParent();
-            ViewGroup priceParent = (ViewGroup) parentView.getChildAt(2);
-            TextView priceView = (TextView) priceParent.getChildAt(0);
-            ViewGroup subToTalParent = (ViewGroup) parentView.getChildAt(5);
-            TextView subTotal = (TextView) subToTalParent.getChildAt(1);
-            Float mPrice = Float.parseFloat(priceView.getText().toString());
+            TextView subTotalTextView = getSubtotalTextView((ViewGroup) view.getParent());
+            Float mPrice = getItemPrice((ViewGroup) view.getParent());
             mTotal -= mPrice;
-            Float subTot = Float.parseFloat(subTotal.getText().toString()) - mPrice;
-            String subTott = String.format("%.2f", subTot);
-            subTotal.setText(subTott);
+            subTotalTextView.setText(String.format("%.2f", Float.parseFloat(subTotalTextView.getText().toString()) - mPrice));
         }
-        //mItemsInCart.setText(Integer.toString(mNoOfItems));
         quantityView.setText(Integer.toString(mCount));
     }
-
 
     public void addToCart(View view) {
         ViewGroup motherView = (ViewGroup)view.getParent().getParent();
@@ -94,10 +83,22 @@ public class MenuActivity extends AppCompatActivity {
             btn.setText("ADDED TO CART");
             btn.setEnabled(false);
         }
-        else{
-            Toast toast = Toast.makeText(this, R.string.toast_invalid_quantity_message, Toast.LENGTH_SHORT);
-            toast.show();
 
-        }
+    }
+
+    public float getItemPrice(ViewGroup viewGroup){
+        ViewGroup priceParent = (ViewGroup) ((ViewGroup)viewGroup.getParent()).getChildAt(2);
+        TextView priceView = (TextView) priceParent.getChildAt(0);
+        return Float.parseFloat(priceView.getText().toString());
+    }
+
+    public TextView getSubtotalTextView(ViewGroup viewGroup){
+        ViewGroup subToTalParent = (ViewGroup)((ViewGroup)viewGroup.getParent()).getChildAt(5);
+        return (TextView) subToTalParent.getChildAt(1);
+
+    }
+
+    public TextView getQuantityView(View view){
+        return (TextView)((ViewGroup)view.getParent()).getChildAt(1);
     }
 }
