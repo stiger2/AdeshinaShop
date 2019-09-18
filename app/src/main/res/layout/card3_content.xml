@@ -29,7 +29,7 @@
             android:id="@+id/price_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
+            android:paddingTop="10dp"
             android:text="@string/item3_price"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -37,13 +37,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
+            android:paddingTop="10dp"
             android:text="CAD"
             android:textSize="18sp"
             android:textStyle="bold" />
 
 
     </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -55,22 +56,22 @@
             android:id="@+id/button_plus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="quantityIncrease"
-            android:text="@string/Plus3" />
+            android:onClick="quantityDecrease"
+            android:text=" - " />
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="14sp"
-            android:text="@string/increase_Decrease_TextView3" />
+            android:text="0" />
 
         <Button
             android:id="@+id/button_minus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="quantityDecrease"
-            android:text="@string/Minus3" />
-
+            android:onClick="quantityIncrease"
+            android:text=" + " />
 
     </LinearLayout>
 
@@ -79,12 +80,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/description3_text" />
-
-    <Button
-        android:id="@+id/addToCart_Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/addToCart3_Text" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -108,9 +103,16 @@
             android:paddingTop="10dp"
             android:paddingRight="10dp"
             android:paddingBottom="10dp"
+            android:layout_marginRight="100dp"
             android:text="0" />
+
+        <Button
+            android:id="@+id/addToCart_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="addToCart"
+            android:text="@string/addToCart2_Text" />
 
 
     </LinearLayout>
-
 </LinearLayout>

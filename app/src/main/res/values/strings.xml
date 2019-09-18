@@ -8,7 +8,7 @@ Ecologically grown cotton is grown using practices that help us protect biodiver
     <string name="description1_text"><b>CAMEL - 0706/202</b>\n\n Bomber jacket made of faux leather fabric with faux fur interior and collar. Long sleeves with elasticized cuffs. Front snap button pockets. Elastic hem. Front zip closure.</string>
     <string name="description3_text"><b>WHITE - 5372/313</b>\n\n Roomy T-shirt with round neck and short sleeves. Front illustration by James Wilson. </string>
     <string name="description4_text"><b>DARK BLUE - 6045/302</b>\n\nSkinny jeans with washed effect. Five pockets. Front zip and metal button closure.</string>
-    <string name="cart_items">items currently in cart</string>
+    <string name="cart_items">ITEMS IN CART</string>
     <string name="current_inCart">0</string>
     <string name="addToCart2_Text">ADD TO CART</string>
     <string name="Minus2">-</string>
@@ -19,7 +19,10 @@ Ecologically grown cotton is grown using practices that help us protect biodiver
     <string name="increase_Decrease_TextView3">0</string>
     <string name="Plus3">+</string>
     <string name="item3_price">35.90</string>
-    <string name="toast_message">Hello Toast</string>
     <string name="item1_price">250.0</string>
     <string name="item4_price">80.0</string>
+    <string name="toast_message">Your Item Has Been Added To Cart</string>
+    <string name="cart_total_amount">TOTAL $</string>
+    <string name="toast_invalid_quantity_message">Select quantity to add to cart</string>
+
 </resources>
