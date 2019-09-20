@@ -94,8 +94,6 @@ public class MenuActivity extends AppCompatActivity {
         Button btn = (Button) view;
         btn.setText("ADDED TO CART");
         btn.setEnabled(false);
-
-
     }
 
     /**
@@ -143,6 +141,5 @@ public class MenuActivity extends AppCompatActivity {
             Toast toast = Toast.makeText(this, R.string.toast_message, Toast.LENGTH_SHORT);
             toast.show();
         }
-
     }
 }

@@ -38,7 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
-            android:text="CAD"
+            android:text="@string/cad4"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -56,21 +56,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="quantityDecrease"
-            android:text=" - " />
+            android:text="@string/decrease4" />
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="14sp"
-            android:text="0" />
+            android:text="@string/quantity4" />
 
         <Button
             android:id="@+id/button_minus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="quantityIncrease"
-            android:text=" + " />
+            android:text="@string/increase4" />
 
     </LinearLayout>
 
@@ -93,7 +93,7 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="SUBTOTAL $" />
+            android:text="@string/subtotal4" />
 
         <TextView
             android:id="@+id/subtotal_textView"
@@ -104,7 +104,7 @@
             android:paddingRight="10dp"
             android:paddingBottom="10dp"
             android:layout_marginRight="100dp"
-            android:text="0" />
+            android:text="@string/subTotal_text_4" />
 
         <Button
             android:id="@+id/addToCart_Button"
