@@ -6,4 +6,134 @@
     android:layout_height="match_parent"
     tools:context=".CheckoutActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="262dp"
+        android:layout_height="423dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:textAlignment="gravity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.383"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.472" />
+
+    <TextView
+        android:id="@+id/before_tax_textView"
+        android:layout_width="129dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="28dp"
+        android:text="Total before Tax"
+        android:textAlignment="viewStart"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/order_id" />
+
+    <TextView
+        android:id="@+id/before_tax_amount_textView"
+        android:layout_width="90dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="12dp"
+        android:text=""
+        android:textAlignment="viewEnd"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/order_id" />
+
+    <TextView
+        android:id="@+id/gst_textView"
+        android:layout_width="122dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="44dp"
+        android:text="G.S.T 5.0%"
+        android:textAlignment="viewStart"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/before_tax_textView" />
+
+    <TextView
+        android:id="@+id/gst_amount_textView"
+        android:layout_width="99dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="12dp"
+        android:text=""
+        android:textAlignment="viewEnd"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/before_tax_amount_textView" />
+
+    <TextView
+        android:id="@+id/pst_textView"
+        android:layout_width="124dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:text="P.S.T 10%"
+        android:textAlignment="viewStart"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/gst_textView" />
+
+    <TextView
+        android:id="@+id/pst_amount_textView"
+        android:layout_width="94dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="12dp"
+        android:text=""
+        android:textAlignment="viewEnd"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/pst_textView"
+        app:layout_constraintTop_toBottomOf="@+id/gst_amount_textView" />
+
+    <TextView
+        android:id="@+id/order_id"
+        android:layout_width="146dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="8dp"
+        android:text="ORDER ID  MM436534"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/total_textView"
+        android:layout_width="95dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:text="TOTAL"
+        android:textAlignment="viewStart"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/pst_textView" />
+
+    <TextView
+        android:id="@+id/total_amount_textView"
+        android:layout_width="103dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="12dp"
+        android:text=""
+        android:textAlignment="viewEnd"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/total_textView"
+        app:layout_constraintTop_toBottomOf="@+id/pst_amount_textView" />
+
+    <TextView
+        android:id="@+id/thank_you_textView"
+        android:layout_width="222dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="8dp"
+        android:text="Thanks for shopping with us"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

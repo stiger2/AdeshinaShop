@@ -135,7 +135,8 @@
                 android:background="@color/colorAccent"
                 android:gravity="center"
                 android:padding="15dp"
-                android:text="CHECKOUT" />
+                android:text="PROCEED TO CHECKOUT"
+                android:onClick="checkout"/>
 
 
 

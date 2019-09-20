@@ -3,6 +3,7 @@ package android.bignerdbranch.adeshinashop;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import java.util.HashMap;
 
 public class MenuActivity extends AppCompatActivity {
 
+    public static final String EXTRA_MESSAGE = "android.twoactivities.extra.MESSAGE";
     private TextView mItemsInCart;
     private TextView mCurrentTotal;
     private Float mTotal = 0F;
@@ -74,12 +76,11 @@ public class MenuActivity extends AppCompatActivity {
         int quantityToAddToCart = Integer.parseInt(quantity.getText().toString());
         quantityInCart += quantityToAddToCart;
         mItemsInCart.setText(Integer.toString(quantityInCart));
-        Toast toast = Toast.makeText(this, R.string.toast_message, Toast.LENGTH_SHORT);
-        toast.show();
+
         String currTotal = String.format("%.2f", mTotal);
         mCurrentTotal.setText(currTotal);
         Button btn = (Button) view;
-        btn.setText("" + quantityToAddToCart + " OF THIS ITEM ADDED TO CART");
+        btn.setText("ADDED TO CART");
         btn.setEnabled(false);
 
 
@@ -99,5 +100,18 @@ public class MenuActivity extends AppCompatActivity {
 
     public TextView getQuantityView(View view){
         return (TextView)((ViewGroup)view.getParent()).getChildAt(1);
+    }
+
+    public void checkout(View view) {
+        if (mNoOfItems != 0) {
+            Intent intent = new Intent(this, CheckoutActivity.class);
+            intent.putExtra(EXTRA_MESSAGE, Float.toString(mTotal));
+            startActivity(intent);
+        }
+        else{
+            Toast toast = Toast.makeText(this, R.string.toast_message, Toast.LENGTH_SHORT);
+            toast.show();
+        }
+
     }
 }
