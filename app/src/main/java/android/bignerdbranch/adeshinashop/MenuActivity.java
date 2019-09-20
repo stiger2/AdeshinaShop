@@ -19,7 +19,7 @@ import java.util.HashMap;
 
 public class MenuActivity extends AppCompatActivity {
 
-    public static final String EXTRA_MESSAGE = "android.twoactivities.extra.MESSAGE";
+    public static final String EXTRA_MESSAGE = "android.adeshinashop.extra.MESSAGE";
     private TextView mItemsInCart;
     private TextView mCurrentTotal;
     private Float mTotal = 0F;
