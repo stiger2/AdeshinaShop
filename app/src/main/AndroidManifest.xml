@@ -20,7 +20,9 @@
 
         <activity android:name=".MenuActivity"
             android:label = "Menu Activity"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:configChanges="orientation|screenSize">
+
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=
